@@ -213,15 +213,14 @@ def main_menu():
             if option == 7:
                 clr_screen()
                 exit_option = input('Are you sure you want to EXIT (yes/no)? ')
-                if exit_option.lower() == 'no':
-                    main_menu()
-                print('Exiting..')
-                save_inventory(cars)
-                break
+                if exit_option.lower() != 'no':
+                    print('Exiting..')
+                    save_inventory(cars)
+                    break
         except ValueError:
             input('Invalid value'
             '\nPress enter to continue..')
-            main_menu()
+            continue
         
 
 if __name__ == "__main__":
